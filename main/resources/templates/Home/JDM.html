@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+    <title>Logon</title>
+   	<link rel="stylesheet" th:href="@{/myAssets/myCSS/myAgendaCSS.css}">
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/dashboard/">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
+	<link th:href="@{/assets/dist/css/bootstrap.min.css}" rel="stylesheet">
+    <link th:href="@{https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.min.css}" rel="stylesheet">
+    <link th:href="@{/dashboard.css}" rel="stylesheet">
+    <style>
+	    a{
+	    	color: white;
+	    }
+	    a:hover{
+	    	color:blue;
+	    }
+		.contadorVisitas {
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 1em;
+            border: 2px solid #000;
+            padding: 10px;
+            display: inline-block;
+            border-radius: 5px;
+            background-color: #fff;
+        }
+    </style>
+</head>
+<body>
+		<div id="rightContainer" class="container" style="flex:flex-wrap;">
+			<h3><a href="/" style="text-decoration: none;">JDM Lover</a></h3>
+			
+			<img id="randomPick" src="/myAssets/images/20241124-L1001066.jpg" alt="FD3S" style="height: 200px; width:300px;">
+			
+			<div>Total de visitas:</div>
+    		<div class="contadorVisitas" th:text="${totalVisits}" id="visitCounter" style="color:black;"></div>
+	</div>
+	<script src="/myAssets/myJS/imageRandomizer.js"></script>
+</body>
+</html>
